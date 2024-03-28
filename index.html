@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiolab</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="welcome-section">
+        <h1 id="title">WELCOME TO <br> AUDIOLAB</h1>
+    </div>
+
+    <div class="audio-samples-1">
+        <p>Listen to the Voices</p>
+        <div class="buttons">
+            <div class="audio-button" id="audio1">
+                <span id="play-icon-1">&#9658;</span>
+            </div>
+            <div class="separator"></div>
+            <div class="audio-button" id="audio2">
+                <span id="play-icon-2">&#9658;</span>
+            </div>
+        </div>
+        
+        <audio id="myAudio" src="audio/ElevenLabs8.flac"></audio>
+    </div>
+
+    <div class="algorithms-1">
+        <p>Let's find out what the best algorithms think...</p>
+        <p id="algorithms-select">Select an algorithm</p>
+        <div class="buttons">
+            <button class="algorithm-button" id="algorithm-1">Deep4SNet</button>
+            <button class="algorithm-button" id="algorithm-2">ResNet18</button>
+            <button class="algorithm-button" id="algorithm-3">RawPC Darts</button>
+            <button class="algorithm-button" id="algorithm-4">RawNet 2</button>
+        </div>
+    </div>
+
+    <div class="compute-section">
+        <p>Select a detection algorithm:</p>
+        <select id="algorithm">
+            <option value="algorithm1">Algorithm 1</option>
+            <option value="algorithm2">Algorithm 2</option>
+            <option value="algorithm3">Algorithm 3</option>
+            <option value="algorithm4">Algorithm 4</option>
+        </select>
+        <button id="compute-btn">Compute</button>
+        <div id="computing-animation"></div>
+    </div>
+
+    <div class="output-section">
+        <p>Comparison:</p>
+        <div id="output"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

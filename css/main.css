@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'YourFontName';
+    src: url('../fonts/Audrey/Audrey-Normal.otf') format('opentype'),
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(19,15,64,1) 100%);
+    color: #fff;
+}
+  
+
+@keyframes breathing {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.welcome-section,
+.compute-section,
+.output-section {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.welcome-section {
+    display: flex;
+    font-family: 'Audrey';
+    justify-content:right;
+    align-items: center;
+    height: 800px;
+    width: 100%;
+    margin: 0px;
+    background-image: url('../img/bg-1.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#title {
+    font-size: 5rem;
+    animation: breathing 5s infinite ease-in-out;
+    text-align: right;
+    margin-right: 80px;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+
+.audio-samples-1 {
+    margin: 80px;
+    font-size: 3rem;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    border: #fff 1px solid;
+}
+
+.audio-samples-1 p {
+    margin-bottom: 100px;
+}
+
+.buttons {
+    display: inline-flex;
+    margin-bottom: 50px;
+}
+
+.separator {
+    margin: 100px;
+}
+
+.audio-button {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, rgba(7,30,46,1) 0%, rgba(101,72,105,1) 100%);
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 3rem;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.audio-button:hover {
+    transform: scale(1.1); 
+}
+
+#audio-button:active {
+    scale: 0.3;
+}
+
+#audio-button span {
+    user-select: none;
+}
+
+.algorithms-1 {
+    margin: 80px;
+    font-size: 3rem;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    border: #fff 1px solid;
+}
+
+#algorithms-select {
+    font-size: 2rem;
+}
+
+.algorithm-button {
+    height: 50px;
+    width: 220px;
+    margin: 30px;
+    background: linear-gradient(45deg, rgba(7,30,46,1) 0%, rgba(101,72,105,1) 100%);
+    border: #fff 0px solid;
+    color: #fff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.algorithm-button:hover {
+    transform: scale(1.1); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#computing-animation {
+    margin-top: 20px;
+    display: none;
+    color: #0f0; /* Neon green */
+}
+
+#output {
+    margin-top: 20px;
+    color: #0f0; /* Neon green */
+}
