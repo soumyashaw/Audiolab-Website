@@ -4,11 +4,11 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(19,15,64,1) 100%);
     color: #fff;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(19,15,64,1) 100%);
 }
   
 
@@ -57,11 +57,10 @@ body {
 
 
 .audio-samples-1 {
-    margin: 80px;
+    padding: 80px;
     font-size: 3rem;
     text-align: center;
     font-family: "Montserrat", sans-serif;
-    border: #fff 1px solid;
 }
 
 .audio-samples-1 p {
@@ -69,12 +68,9 @@ body {
 }
 
 .buttons {
-    display: inline-flex;
+    display: flex;
     margin-bottom: 50px;
-}
-
-.separator {
-    margin: 100px;
+    justify-content: space-evenly;
 }
 
 .audio-button {
@@ -103,12 +99,41 @@ body {
     user-select: none;
 }
 
+.audio-button-outer {
+    font-size: 1.5rem;
+}
+
+.poll-1 {
+    padding: 80px;
+    font-size: 2rem;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+.poll-button {
+    height: 50px;
+    width: 220px;
+    margin: 30px;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(45deg, rgba(7,30,46,1) 0%, rgba(101,72,105,1) 100%);
+    border: #fff 0px solid;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.poll-button:hover {
+    transform: scale(1.1); 
+}
+
+
+
+
 .algorithms-1 {
     margin: 80px;
     font-size: 3rem;
     text-align: center;
     font-family: "Montserrat", sans-serif;
-    border: #fff 1px solid;
 }
 
 #algorithms-select {
@@ -119,39 +144,359 @@ body {
     height: 50px;
     width: 220px;
     margin: 30px;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
     background: linear-gradient(45deg, rgba(7,30,46,1) 0%, rgba(101,72,105,1) 100%);
     border: #fff 0px solid;
     color: #fff;
     border-radius: 8px;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
-
 .algorithm-button:hover {
     transform: scale(1.1); 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#computing-animation {
-    margin-top: 20px;
-    display: none;
-    color: #0f0; /* Neon green */
+#result-algorithm-1 {
+    height: 50px;
+    font-size: 2rem;
 }
 
-#output {
+
+:root {
+    --gray: #0a0821;
+    --blue: rgb(0, 122, 253);
+    --green: rgb(6, 215, 108);
+    --white: rgb(253, 251, 252);
+}
+
+.guide {
+    margin: 80px;
+    font-size: 3rem;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.action-selector {
+    margin: 80px;
+    font-size: 2rem;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.action-button {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, rgba(7,30,46,1) 0%, rgba(101,72,105,1) 100%);
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 4rem;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+#action1-1 {
+    left: 90px;
+}
+
+#action1-2 {
+    left: 53px;
+}
+
+.action-button:hover {
+    transform: scale(1.1); 
+}
+
+#action-button span {
+    user-select: none;
+}
+
+.action-area {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.action-button-outer {
+    font-size: 1.5rem;
+}
+
+.written-text {
+    display: flex;
+}
+
+.information-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.info {
+    
+    font-size: 18px;
+    color: var(--green);
+    cursor: help;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 150px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.information-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+.addition-animation {
+    position: inherit;
+    height: 18rem;
+    width: 23rem;
+    margin: 50px auto;
+    animation: shake 1.3s ease-in-out;
+    display: none;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-20px); }
+    40% { transform: translateX(20px); }
+    60% { transform: translateX(-20px); }
+    80% { transform: translateX(20px); }
+    100% { transform: translateX(0); }
+    
+}
+.beaker {
+    position: relative;
+    content: '';
+    top: -54%;
+    left: 62%;
+    transform: translateX(-63%) rotate(19deg);
+
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--gray);
+    border: .1rem solid var(--white);
+    border-top: none;
+    border-bottom: none;
+}
+
+.chemical {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(25deg);
+    width: 10rem;
+    height: 10rem;
+    border: .15rem solid var(--white);
+    border-top: .2rem solid var(--gray);
+    border-radius: 50%;
+
+    outline: .15rem solid var(--white);
+    outline-offset: .5rem;
+    overflow: hidden;
+}
+
+.chemical::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 130%;
+    top: 50%;
+    left: 15%;
+    transform: rotate(75deg);
+    background-color: var(--green);
+    animation: wave 1.3s linear;
+}
+
+@keyframes wave {
+    0% { transform: rotate(75deg);
+         background-color: var(--blue); }
+    10% { transform: rotate(69deg); }
+    20% { transform: rotate(62deg); }
+    30% { transform: rotate(69deg); }
+    40% { transform: rotate(75deg); }
+    50% { transform: rotate(80deg); }
+    60% { transform: rotate(85deg); }
+    70% { transform: rotate(90deg);
+         background-color: var(--blue);}
+    80% { transform: rotate(85deg); }
+    90% { transform: rotate(75deg); }
+    100% { top: 50%; }
+}
+
+.bubbles {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateX(10px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bubble {
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: var(--green);
+    border-radius: 50%;
+    transform: translate(60px, 65px);
+    animation: chemical_bubbles 2s linear infinite;
+}
+
+@keyframes chemical_bubbles {
+    0% { transform: translate(60px, 65px) scale(.3); 
+         opacity: 0;}
+    20% { opacity: 1;}
+    60% { transform: translate(20px, 45px); 
+          opacity: 1;}
+    100% { transform: translate(-40px, -80px) scale(.4);
+          opacity: 1;}
+}
+
+.bubble:nth-child(1) {
+    animation-delay: 1.4s;
+}
+.bubble:nth-child(2) {
+    animation-delay: 3.8s;
+    width: 1.8rem;
+    height: 1.8rem;
+}
+.bubble:nth-child(3) {
+    animation-delay: .6s;
+    width: 2rem;
+    height: 2rem;
+}
+.bubble:nth-child(4) {
+    animation-delay: 3s;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.bubble:nth-child(5) {
+    animation-delay: 2.2s;
+}
+.chemical-text {
+    position: relative;
+    top: 10%;
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+
+
+.effects-results {
+    display: none;
+    justify-content: space-evenly;
+}
+
+.sample-button {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, rgba(7,30,46,1) 0%, rgba(101,72,105,1) 100%);
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 3rem;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.sample-button:hover {
+    transform: scale(1.1); 
+}
+
+.sample-button-outer {
+    font-size: 1.5rem;
+}
+#sample1 {
+    left: 22px;
     margin-top: 20px;
-    color: #0f0; /* Neon green */
+}
+.test-outer {
+    display: flex;
+    font-size: 1.5rem;
+    color: #000;
+    transition: all 0.3s ease;
+}
+.test-outer:hover {
+    transform: scale(1.1); 
+}
+.test-outer p {
+    position: relative;
+    left: -41%;
+    top: 75px;
+    cursor: pointer;
+}
+.test-arrow {
+    width: 100px;
+    height: 60px;
+    position: relative;
+    left: 40px;
+    top: 80px;
+    cursor: pointer;
+    background-color: var(--blue);
+}
+.test-arrow-head {
+    position: relative;
+    top: 60px;
+    left: 40px;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top: 0;
+    cursor: pointer;
+    border-bottom: 100px solid var(--blue);
+    transform: rotate(90deg);
+}
+.metrics {
+    font-family: 'Audrey';
+    font-size: 1.5rem;
+    opacity: 0;
+    
+}
+.metrics p {
+    margin-top: 50px;
+    line-height: 1.5;
+}
+.computing {
+    height: 0px;
+    width: 0px;
+}
+.computing img{
+    position: relative;
+    left: 1110px;
+    top: -170px;
+    width: 100px;
+    height: 100px;
+    display: none;
+    animation: breathing 2s infinite ease-in-out;
+}
+.oops {
+    font-size: 2rem;
+    margin: 10rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+}
+.red {
+    color: #EE4B2B;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 1px;
 }
