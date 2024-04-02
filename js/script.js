@@ -37,7 +37,6 @@ document.getElementById('audio1').addEventListener('click', function() {
 });
 
 document.getElementById('audio2').addEventListener('click', function() {
-    //audioElement = document.getElementById("myAudio");
     if (realAudio1.paused) {
         realAudio1.play();
         document.getElementById("play-icon-2").innerHTML = "&#9616;&#9616;";
@@ -77,22 +76,22 @@ var resultContainerAlgo = document.getElementById('result-algorithm-1');
 
 buttonAlgo1.addEventListener('click', function() {
     resultContainerAlgo.textContent = "";
-    typeEffect("Test Text 1.", 50, resultContainerAlgo);
+    typeEffect("Speaker 1: Fake (0%).        Speaker 2: Real (100%)", 50, resultContainerAlgo);
 });
 
 buttonAlgo2.addEventListener('click', function() {
     resultContainerAlgo.textContent = "";
-    typeEffect("Test Text 2.", 50, resultContainerAlgo);
+    typeEffect("Speaker 1: Fake (0.682%).        Speaker 2: Real (98.90%)", 50, resultContainerAlgo);
 });
 
 buttonAlgo3.addEventListener('click', function() {
     resultContainerAlgo.textContent = "";
-    typeEffect("Test Text 3.", 50, resultContainerAlgo);
+    typeEffect("Speaker 1: Fake (0.49%).        Speaker 2: Fake (0.03%)", 50, resultContainerAlgo);
 });
 
 buttonAlgo4.addEventListener('click', function() {
     resultContainerAlgo.textContent = "";
-    typeEffect("Test Text 4.", 50, resultContainerAlgo);
+    typeEffect("Speaker 1: Fake (0.89%).        Speaker 2: Real (95.37%)", 50, resultContainerAlgo);
 });
 
 
@@ -111,8 +110,12 @@ document.getElementById('action1-1').addEventListener('click', function() {
     var oops1 = document.getElementById('oops-1');
     var arrow1 = document.getElementById('test-arrow-1')
     var arrowHead1 = document.getElementById('test-arrow-head-1')
+    var metrics1Para = document.getElementById('metrics-1-para');
     content2.style.display = 'none';
     selectedAudioAction1 = 'noisyAudio';
+    if (selectedAudioAction1 == 'noisyAudio') {
+        metrics1Para.textContent = "Deep4SNet: Real (100%)\nResNet18: Fake (2.06%)\nRawPC Darts: Fake (0.50%)\nRawNet 2: Fake (1.67%)";
+    }
     content1.style.display = 'block';
     oops1.style.opacity = 0;
     metrics1.style.opacity = 0;
@@ -137,8 +140,12 @@ document.getElementById('action1-2').addEventListener('click', function() {
     var oops1 = document.getElementById('oops-1');
     var arrow1 = document.getElementById('test-arrow-1')
     var arrowHead1 = document.getElementById('test-arrow-head-1')
+    var metrics1Para = document.getElementById('metrics-1-para');
     content2.style.display = 'none';
     selectedAudioAction1 = 'echoAudio';
+    if (selectedAudioAction1 == 'echoAudio') {
+        metrics1Para.textContent = "Deep4SNet: Real (100%)\nResNet18: Real (99.67%)\nRawPC Darts: Fake (4.68%)\nRawNet 2: Fake (3.32%)"
+    }
     content1.style.display = 'block';
     oops1.style.opacity = 0;
     metrics1.style.opacity = 0;
@@ -265,8 +272,12 @@ document.getElementById('action2-1').addEventListener('click', function() {
     var oops2 = document.getElementById('oops-2');
     var arrow2 = document.getElementById('test-arrow-2')
     var arrowHead2 = document.getElementById('test-arrow-head-2')
+    var metrics2Para = document.getElementById('metrics-2-para');
     content2.style.display = 'none';
     selectedAudioAction2 = 'lowBitRateAudio';
+    if (selectedAudioAction2 == 'lowBitRateAudio') {
+        metrics2Para.textContent = "Deep4SNet: Real (100%)\nResNet18: Real (99.77%)\nRawPC Darts: Fake (0.39%)\nRawNet 2: Fake (0.89%)";
+    }
     content1.style.display = 'block';
     oops2.style.opacity = 0;
     metrics2.style.opacity = 0;
@@ -289,10 +300,14 @@ document.getElementById('action2-2').addEventListener('click', function() {
     var content3 = document.getElementById('test-outer-2');
     var metrics2 = document.getElementById('metrics-2');
     var oops2 = document.getElementById('oops-2');
-    var arrow2 = document.getElementById('test-arrow-2')
-    var arrowHead2 = document.getElementById('test-arrow-head-2')
+    var arrow2 = document.getElementById('test-arrow-2');
+    var arrowHead2 = document.getElementById('test-arrow-head-2');
+    var metrics2Para = document.getElementById('metrics-2-para');
     content2.style.display = 'none';
     selectedAudioAction2 = 'gaussianNoiseAudio';
+    if (selectedAudioAction2 == 'gaussianNoiseAudio') {
+        metrics2Para.textContent = "Deep4SNet: Real (100%)\nResNet18: Real (99.98%)\nRawPC Darts: Fake (0.42%)\nRawNet 2: Fake (1.26%)"
+    }
     content1.style.display = 'block';
     oops2.style.opacity = 0;
     metrics2.style.opacity = 0;

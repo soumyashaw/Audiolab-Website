@@ -64,7 +64,7 @@ body {
 }
 
 .audio-samples-1 p {
-    margin-bottom: 100px;
+    margin-bottom: 170px;
 }
 
 .buttons {
@@ -105,6 +105,7 @@ body {
 
 .poll-1 {
     padding: 80px;
+    padding-bottom: 150px;
     font-size: 2rem;
     text-align: center;
     font-family: "Montserrat", sans-serif;
@@ -131,15 +132,14 @@ body {
 
 .algorithms-1 {
     margin: 80px;
+    padding-bottom: 110px;
     font-size: 3rem;
     text-align: center;
     font-family: "Montserrat", sans-serif;
 }
-
 #algorithms-select {
     font-size: 2rem;
 }
-
 .algorithm-button {
     height: 50px;
     width: 220px;
@@ -159,6 +159,7 @@ body {
 #result-algorithm-1 {
     height: 50px;
     font-size: 2rem;
+    white-space: pre;
 }
 
 
@@ -241,7 +242,7 @@ body {
 
 .tooltip {
     visibility: hidden;
-    width: 150px;
+    width: 350px;
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -400,7 +401,6 @@ body {
     display: none;
     justify-content: space-evenly;
 }
-
 .sample-button {
     position: relative;
     width: 150px;
@@ -462,14 +462,15 @@ body {
     transform: rotate(90deg);
 }
 .metrics {
-    font-family: 'Audrey';
-    font-size: 1.5rem;
+    font-family: monospace;
+    font-size: 1.2rem;
     opacity: 0;
     
 }
 .metrics p {
     margin-top: 50px;
     line-height: 1.5;
+    white-space: pre;
 }
 .computing {
     height: 0px;
@@ -487,6 +488,7 @@ body {
 .oops {
     font-size: 2rem;
     margin: 10rem;
+    margin-top: 3rem;
     text-align: center;
     display: flex;
     justify-content: center;

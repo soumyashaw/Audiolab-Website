@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -30,12 +31,12 @@
                 <p>Speaker 2</p>
             </div>
         </div>
-        <audio id="fakeAudio-1" src="audio/ElevenLabs8.flac"></audio>
-        <audio id="realAudio-1" src="audio/RealLabs8.flac"></audio>
+        <audio id="fakeAudio-1" src="audio/FakeVoice.flac"></audio>
+        <audio id="realAudio-1" src="audio/RealVoice.flac"></audio>
     </div>
 
     <div class="poll-1">
-        <p>Which one is the authentic speaker?</p>
+        <p>Which one is the authentic speaker based on the voice?</p>
         <div class="buttons">
             <button class="poll-button" id="poll-1">Speaker 1</button>
             <button class="poll-button" id="poll-2">Speaker 2</button>
@@ -74,7 +75,9 @@
                     <p>Add Background Noise</p>
                     <div class="information-icon">
                         <span class="info">i</span>
-                        <div class="tooltip">Detailed explanation here</div>
+                        <div class="tooltip">This effect will add the sound of a public place
+                            to the audio clip as background noise maintaining certain strength of original audio.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -86,7 +89,10 @@
                     <p>Add Room Echo</p>
                     <div class="information-icon">
                         <span class="info">i</span>
-                        <div class="tooltip">Detailed explanation here</div>
+                        <div class="tooltip">This effect will add an echo effect that gets generated when
+                            a speaker speaks in a room with hard walls. You can expect some repetitions 
+                            of the audio for a very short time.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -111,20 +117,15 @@
                 </div>
                 <p>Resulting Audio</p>
             </div>
-            <audio id="noisyAudio" src="audio/ElevenLabs8.flac"></audio>
-            <audio id="echoAudio" src="audio/ElevenLabs8.flac"></audio>
+            <audio id="noisyAudio" src="audio/FakeVoiceBG220dB.flac"></audio>
+            <audio id="echoAudio" src="audio/FakeVoiceEcho.flac"></audio>
             <div class="test-outer" id="test-outer">
                 <div class="test-arrow" id="test-arrow-1"></div>
                 <div class="test-arrow-head" id="test-arrow-head-1"></div>
                 <p id="test-it">Test It!</p>
             </div>
             <div class="metrics" id="metrics-1">
-                <p>
-                    Deep4SNet: Real (58%) <br>
-                    ResNet18: Fake (62%) <br>
-                    RawPC Darts: Fake (60%) <br>
-                    RawNet 2: Fake (59%) <br>
-                </p>
+                <p id="metrics-1-para"></p>
             </div>
         </div>
         <div class="computing"><img id="computing-1" src="img/iconfinder-cloudcomputing-4417107_116633.png"> </div>
@@ -146,7 +147,9 @@
                     <p>Add Low Bit Rate Effect</p>
                     <div class="information-icon">
                         <span class="info">i</span>
-                        <div class="tooltip">Detailed explanation here</div>
+                        <div class="tooltip">This effect renders an audio which is obtained from bad signal
+                            strength or low internet speed. The audio will have some distortions.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -158,7 +161,8 @@
                     <p>Add Gaussian Noise</p>
                     <div class="information-icon">
                         <span class="info">i</span>
-                        <div class="tooltip">Detailed explanation here</div>
+                        <div class="tooltip">This effect will add a Gaussian noise (a characterictic noise 
+                            in audio domain) to the original audio in background.</div>
                     </div>
                 </div>
             </div>
@@ -183,25 +187,20 @@
                 </div>
                 <p>Resulting Audio</p>
             </div>
-            <audio id="lowBitRateAudio" src="audio/ElevenLabs8.flac"></audio>
-            <audio id="gaussianNoiseAudio" src="audio/ElevenLabs8.flac"></audio>
+            <audio id="lowBitRateAudio" src="audio/FakeVoiceBitRate.wav"></audio>
+            <audio id="gaussianNoiseAudio" src="audio/FakeVoiceGaussian15dB.flac"></audio>
             <div class="test-outer" id="test-outer-2">
                 <div class="test-arrow" id="test-arrow-2"></div>
                 <div class="test-arrow-head" id="test-arrow-head-2"></div>
                 <p id="test-it-2">Test It!</p>
             </div>
             <div class="metrics" id="metrics-2">
-                <p>
-                    Deep4SNet: Real (58%) <br>
-                    ResNet18: Fake (62%) <br>
-                    RawPC Darts: Fake (60%) <br>
-                    RawNet 2: Fake (59%) <br>
-                </p>
+                <p id="metrics-2-para"></p>
             </div>
         </div>
         <div class="computing"><img id="computing-2" src="img/iconfinder-cloudcomputing-4417107_116633.png"> </div>
         <div class="oops" id="oops-2">
-            Oh no... I think <div class="red">ResNet18</div> got deceived by the effect!
+            Oh no... I think <div class="red">Deep4SNet</div> & <div class="red">ResNet18</div> got deceived by the effect!
         </div>
     </div>
 
@@ -213,13 +212,14 @@
         <div class="action-area">
             <div class="action-button-outer">
                 <div class="action-button" id="action3-1">
-                    <span id="play-icon-4">&#43;</span>
+                    <span>&#43;</span>
                 </div>
                 <div class="written-text">
                     <p>Reduce Volume</p>
                     <div class="information-icon">
                         <span class="info">i</span>
-                        <div class="tooltip">Detailed explanation here</div>
+                        <div class="tooltip">This effect will reduce some fixed amount of volume from the 
+                            original audio.</div>
                     </div>
                 </div>
             </div>
@@ -244,8 +244,7 @@
                 </div>
                 <p>Resulting Audio</p>
             </div>
-            <audio id="volReducedAudio" src="audio/ElevenLabs8.flac"></audio>
-            <audio id="echoAudio" src="audio/ElevenLabs8.flac"></audio>
+            <audio id="volReducedAudio" src="audio/FakeVoiceVolume10dB.flac"></audio>
             <div class="test-outer" id="test-outer-3">
                 <div class="test-arrow" id="test-arrow-3"></div>
                 <div class="test-arrow-head" id="test-arrow-head-3"></div>
@@ -253,11 +252,10 @@
             </div>
             <div class="metrics" id="metrics-3">
                 <p>
-                    Deep4SNet: Real (58%) <br>
-                    ResNet18: Fake (62%) <br>
-                    RawPC Darts: Fake (60%) <br>
-                    RawNet 2: Fake (59%) <br>
-                </p>
+Deep4SNet: Real (100%)
+ResNet18: Fake (17.42%)
+RawPC Darts: Real (82.82%)
+RawNet 2: Real (76.87%)</p>
             </div>
         </div>
         <div class="computing"><img id="computing-3" src="img/iconfinder-cloudcomputing-4417107_116633.png"> </div>
