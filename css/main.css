@@ -415,11 +415,9 @@ body {
     color: #fff;
     transition: all 0.3s ease;
 }
-
 .sample-button:hover {
     transform: scale(1.1); 
 }
-
 .sample-button-outer {
     font-size: 1.5rem;
 }
@@ -499,4 +497,21 @@ body {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 1px;
+}
+#action2-1 {
+    left: 92px;
+}
+#action2-2 {
+    left: 73px;
+}
+#sample2 {
+    left: 22px;
+    margin-top: 20px;
+}
+#action3-1 {
+    left: 50px;
+}
+#sample3 {
+    left: 22px;
+    margin-top: 20px;
 }
