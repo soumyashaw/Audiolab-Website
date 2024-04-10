@@ -37,7 +37,7 @@ body {
     font-family: 'Audrey';
     justify-content:right;
     align-items: center;
-    height: 800px;
+    height: 970px;
     width: 100%;
     margin: 0px;
     background-image: url('../img/bg-1.jpg');
@@ -50,7 +50,7 @@ body {
     font-size: 5rem;
     animation: breathing 5s infinite ease-in-out;
     text-align: right;
-    margin-right: 80px;
+    margin-right: 150px;
     font-weight: 200;
     letter-spacing: 2px;
 }
@@ -105,7 +105,7 @@ body {
 
 .poll-1 {
     padding: 80px;
-    padding-bottom: 150px;
+    padding-bottom: 270px;
     font-size: 2rem;
     text-align: center;
     font-family: "Montserrat", sans-serif;
@@ -132,7 +132,7 @@ body {
 
 .algorithms-1 {
     margin: 80px;
-    padding-bottom: 110px;
+    padding-bottom: 150px;
     font-size: 3rem;
     text-align: center;
     font-family: "Montserrat", sans-serif;
@@ -172,6 +172,7 @@ body {
 
 .guide {
     margin: 80px;
+    margin-top: 100px;
     font-size: 3rem;
     text-align: center;
     font-family: "Montserrat", sans-serif;
@@ -468,7 +469,7 @@ body {
     
 }
 .metrics p {
-    margin-top: 50px;
+    margin-top: 0px;
     line-height: 1.5;
     white-space: pre;
 }
@@ -478,7 +479,7 @@ body {
 }
 .computing img{
     position: relative;
-    left: 1110px;
+    left: 1435px;
     top: -170px;
     width: 100px;
     height: 100px;

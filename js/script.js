@@ -76,22 +76,22 @@ var resultContainerAlgo = document.getElementById('result-algorithm-1');
 
 buttonAlgo1.addEventListener('click', function() {
     resultContainerAlgo.textContent = "";
-    typeEffect("Speaker 1: Fake (0%).        Speaker 2: Real (100%)", 50, resultContainerAlgo);
+    typeEffect("Speaker 1: Fake        Speaker 2: Real", 50, resultContainerAlgo);
 });
 
 buttonAlgo2.addEventListener('click', function() {
     resultContainerAlgo.textContent = "";
-    typeEffect("Speaker 1: Fake (0.682%).        Speaker 2: Real (98.90%)", 50, resultContainerAlgo);
+    typeEffect("Speaker 1: Fake        Speaker 2: Real", 50, resultContainerAlgo);
 });
 
 buttonAlgo3.addEventListener('click', function() {
     resultContainerAlgo.textContent = "";
-    typeEffect("Speaker 1: Fake (0.49%).        Speaker 2: Fake (0.03%)", 50, resultContainerAlgo);
+    typeEffect("Speaker 1: Fake        Speaker 2: Fake", 50, resultContainerAlgo);
 });
 
 buttonAlgo4.addEventListener('click', function() {
     resultContainerAlgo.textContent = "";
-    typeEffect("Speaker 1: Fake (0.89%).        Speaker 2: Real (95.37%)", 50, resultContainerAlgo);
+    typeEffect("Speaker 1: Fake        Speaker 2: Real", 50, resultContainerAlgo);
 });
 
 
@@ -114,7 +114,7 @@ document.getElementById('action1-1').addEventListener('click', function() {
     content2.style.display = 'none';
     selectedAudioAction1 = 'noisyAudio';
     if (selectedAudioAction1 == 'noisyAudio') {
-        metrics1Para.textContent = "Deep4SNet: Real (100%)\nResNet18: Fake (2.06%)\nRawPC Darts: Fake (0.50%)\nRawNet 2: Fake (1.67%)";
+        metrics1Para.innerHTML = "<strong>Deep4SNet</strong>: Real\n(0% → 100%)\n<strong>ResNet18</strong>: Fake\n(0.68% → 2.06%)\n<strong>RawPC Darts</strong>: Fake\n(0.49% → 0.50%)\n<strong>RawNet 2</strong>: Fake\n(0.89% → 1.67%)";
     }
     content1.style.display = 'block';
     oops1.style.opacity = 0;
@@ -144,7 +144,7 @@ document.getElementById('action1-2').addEventListener('click', function() {
     content2.style.display = 'none';
     selectedAudioAction1 = 'echoAudio';
     if (selectedAudioAction1 == 'echoAudio') {
-        metrics1Para.textContent = "Deep4SNet: Real (100%)\nResNet18: Real (99.67%)\nRawPC Darts: Fake (4.68%)\nRawNet 2: Fake (3.32%)"
+        metrics1Para.innerHTML = "<strong>Deep4SNet</strong>: Real\n(0% → 100%)\n<strong>ResNet18</strong>: Real\n(0.68% → 99.67%)\n<strong>RawPC Darts</strong>: Fake\n(0.49% → 4.68%)\n<strong>RawNet 2</strong>: Fake\n(0.89% → 3.32%)"
     }
     content1.style.display = 'block';
     oops1.style.opacity = 0;
@@ -276,14 +276,14 @@ document.getElementById('action2-1').addEventListener('click', function() {
     content2.style.display = 'none';
     selectedAudioAction2 = 'lowBitRateAudio';
     if (selectedAudioAction2 == 'lowBitRateAudio') {
-        metrics2Para.textContent = "Deep4SNet: Real (100%)\nResNet18: Real (99.77%)\nRawPC Darts: Fake (0.39%)\nRawNet 2: Fake (0.89%)";
+        metrics2Para.innerHTML = "<strong>Deep4SNet</strong>: Real\n(0% → 100%)\n<strong>ResNet18</strong>: Real\n(0.68% → 99.77%)\n<strong>RawPC Darts</strong>: Fake\n(0.49% → 0.39%)\n<strong>RawNet 2</strong>: Fake\n(0.89% → 0.89%)";
     }
     content1.style.display = 'block';
     oops2.style.opacity = 0;
     metrics2.style.opacity = 0;
     arrow2.style.backgroundColor = 'rgb(0, 122, 253)';
     arrowHead2.style.borderBottom = '100px solid rgb(0, 122, 253)';
-    
+
     setTimeout(function() {
         content2.style.display = 'flex';
         content3.style.opacity = 0;
@@ -306,7 +306,7 @@ document.getElementById('action2-2').addEventListener('click', function() {
     content2.style.display = 'none';
     selectedAudioAction2 = 'gaussianNoiseAudio';
     if (selectedAudioAction2 == 'gaussianNoiseAudio') {
-        metrics2Para.textContent = "Deep4SNet: Real (100%)\nResNet18: Real (99.98%)\nRawPC Darts: Fake (0.42%)\nRawNet 2: Fake (1.26%)"
+        metrics2Para.innerHTML = "<strong>Deep4SNet</strong>: Real\n(0% → 100%)\n<strong>ResNet18</strong>: Real\n(0.68% → 99.98%)\n<strong>RawPC Darts</strong>: Fake\n(0.49% → 0.42%)\n<strong>RawNet 2</strong>: Fake\n(0.89% → 1.26%)"
     }
     content1.style.display = 'block';
     oops2.style.opacity = 0;
@@ -388,11 +388,11 @@ document.getElementById('test-it-2').addEventListener('click', function() {
 });
 
 lowBitRateAudio.addEventListener("ended", function() {
-    playIcon5.innerHTML = "&#9658;";
+    playIcon4.innerHTML = "&#9658;";
 });
 
 gaussianNoiseAudio.addEventListener("ended", function() {
-    playIcon6.innerHTML = "&#9658;";
+    playIcon4.innerHTML = "&#9658;";
 });
 
 document.getElementById('sample2').addEventListener('click', function() {
@@ -422,7 +422,7 @@ document.getElementById('sample2').addEventListener('click', function() {
 // Real World Effects 3
 
 var volReducedAudio = document.getElementById("volReducedAudio");
-var playIcon4 = document.getElementById("play-icon-4");
+var playIcon5 = document.getElementById("play-icon-5");
 
 document.getElementById('action3-1').addEventListener('click', function() {
     var content1 = document.getElementById('addition-animation-3');
@@ -513,16 +513,16 @@ document.getElementById('test-it-3').addEventListener('click', function() {
 });
 
 volReducedAudio.addEventListener("ended", function() {
-    playIcon4.innerHTML = "&#9658;";
+    playIcon5.innerHTML = "&#9658;";
 });
 
 document.getElementById('sample3').addEventListener('click', function() {
     if (volReducedAudio.paused) {
         volReducedAudio.play();
-        document.getElementById("play-icon-4").innerHTML = "&#9616;&#9616;";
+        document.getElementById("play-icon-5").innerHTML = "&#9616;&#9616;";
     } else {
         volReducedAudio.pause();
         volReducedAudio.currentTime = 0;
-        document.getElementById("play-icon-4").innerHTML = "&#9658;";
+        document.getElementById("play-icon-5").innerHTML = "&#9658;";
     }
 });
